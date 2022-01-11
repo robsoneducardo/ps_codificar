@@ -3,7 +3,8 @@ import './App.css';
 import Filter from "./components/Filter";
 import Budget from "./components/Budget";
 
-function App() {
+function App(props) {
+  console.log(props.budgets[2]);
   return (
     <div className="App">
       <header className="row">
