@@ -3,8 +3,19 @@ import './App.css';
 import Filter from "./components/Filter";
 import Budget from "./components/Budget";
 
+
 function App(props) {
-  console.log(props.budgets[2]);
+  console.log(props.budgets);
+
+  console.log(props.budgets[2].customer)
+
+  const budgetList = props.budgets?.map(budget => (
+          <Budget customer={budget.customer} seller={budget.seller}
+                  description={budget.description} value={budget.value} />
+          )
+  );
+  // console.log(budgetList);
+
   return (
     <div className="App">
       <header className="row">
@@ -23,7 +34,10 @@ function App(props) {
                 </div>
                 <div className="row justify-content-center rowling" >
                   <div className="col-10 rolling">
-                    <Budget/>
+                    <ul>
+                      {/*<Budget/>*/}
+                      {budgetList}
+                    </ul>
                   </div>
                 </div>
               </div>

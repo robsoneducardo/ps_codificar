@@ -81,12 +81,12 @@ footer p{
     border-radius: 5px;
     border: 1px solid var(--medio);
     margin: 15px 0;
-    height: 120px;
+    /*height: 180px;*/
 }
 
 .rolling{
     overflow-y: auto;
-    height: calc(100vh - 290px);
+    height: calc(100vh - 175px);
 }
 
 .rowling{
