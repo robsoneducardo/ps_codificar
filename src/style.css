@@ -1,4 +1,6 @@
 :root{
+    /* color pallete - names in pt-br */
+    /* if you must change the pallete, the names still untoched */
     --destaque: #e63946ff;
     --neutro: #f1faeeff;
     --claro: #a8dadcff;
@@ -46,7 +48,6 @@ main div div{
     background-color: var(--neutro);
 }
 
-
 footer{
     background-color: var(--claro);
     padding: 0;
@@ -60,12 +61,10 @@ footer{
 }
 
 
-/* CABEÇALHOS */
+/* HEADERS */
 h1, h2, h3, h4, h5, h6{
     text-align: center;
 }
-
-/* OUTROS */
 
 main label{
     width: 100px;
@@ -76,6 +75,7 @@ footer p{
     height: 15px;
 }
 
+/* each budget listed */
 .item{
     background-color: white;
     border-radius: 5px;
@@ -84,15 +84,13 @@ footer p{
     /*height: 180px;*/
 }
 
+/* this div rolls the item list */
 .rolling{
     overflow-y: auto;
     height: calc(100vh - 175px);
 }
 
-.rowling{
-    height: calc(100vh - 290px);
-}
-
+/* this div defines the height to the item list*/
 .sizer{
     height: calc(100vh - 85px);
     overflow-y: hidden;
