@@ -85,7 +85,7 @@ footer p{
 }
 
 .rolling{
-    overflow-y: scroll;
+    overflow-y: auto;
     height: calc(100vh - 290px);
 }
 
