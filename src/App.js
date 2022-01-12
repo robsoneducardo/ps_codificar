@@ -4,6 +4,11 @@ import Budget from "./components/Budget";
 
 
 function App(props) {
+  if (!(props.budgets.length) && props.budgets.length !== 0){
+    return (<div className="alert alert-danger" role="alert">
+      Houve um erro ao Carregar os dados.
+    </div>);
+  }
 
   const budgetList = props.budgets?.map(budget => (
           <Budget key={budget.id} customer={budget.customer}

@@ -8,28 +8,16 @@ import reportWebVitals from './reportWebVitals';
 
 let api_url = "https://my-json-server.typicode.com/codificar/oficina/proposals";
 
-function addBudget (budgets){
+function confirmBudget (budgets){
     ReactDOM.render(
-            <App budgets={budgets} error="false" />,
+            <App budgets={budgets} />,
             document.getElementById('root'));
 }
 
-function failReport(){
-    console.log("fail being reported.");
-    ReactDOM.render(
-            <App error="true" />,
-            document.getElementById('root'));
-}
-
-// estou confuso com este trecho. Ele deveria passar pelo fail Report.
-// apesar de estar funcionando, não está do jeito que deveria ser.
 fetch(api_url)
         .then(response => {
             return response.json();
         })
-        .then(data => addBudget(data));
+        .then(data => confirmBudget(data));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
