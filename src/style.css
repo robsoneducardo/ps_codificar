@@ -6,6 +6,7 @@
     --claro: #a8dadcff;
     --medio: #457b9dff;
     --escuro: #1d3557ff;
+    --escuro-transp: #1d355788;
 }
 
 *{
@@ -100,7 +101,10 @@ footer p{
 
 /* modal styleing */
 .modal-container{
-    background: rgba(33,33,120,.5);
+    /*background: rgba(33,33,120,.5);*/
+    /*background: rgba(var(--destaque), .5);*/
+    /*background: var(--destaque);*/
+    background: var(--escuro-transp);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -113,4 +117,19 @@ footer p{
 .btn-modal{
     padding: 10px 40px;
     align-self: center;
+}
+
+.btn-budget{
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.btn-primary{
+    background: var(--escuro);
+    border: var(--escuro);
+}
+
+.btn-primary:hover{
+    background: var(--destaque);
+    border: var(--destaque);
 }
