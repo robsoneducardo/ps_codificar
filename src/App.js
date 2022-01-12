@@ -1,6 +1,7 @@
 import './App.css';
 import Filter from "./components/Filter";
 import Budget from "./components/Budget";
+import Modal from "./components/Modal";
 
 
 function App(props) {
@@ -22,6 +23,7 @@ function App(props) {
       <header className="row">
         <div className="col-12">
           <h1>Oficina Online</h1>
+          <Modal />
         </div>
       </header>
       <main>

@@ -97,3 +97,20 @@ footer p{
     padding-right: 17px;
     scrollbar-width: none;
 }
+
+/* modal styleing */
+.modal-container{
+    background: rgba(33,33,120,.5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    visibility: hidden;
+}
+
+.btn-modal{
+    padding: 10px 40px;
+    align-self: center;
+}
