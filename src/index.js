@@ -7,19 +7,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 let api_url = "https://my-json-server.typicode.com/codificar/oficina/proposals";
-let response = fetch(api_url);
-// console.log(response)
-// let budgetResponse = response.json();
-// console.log(budgetResponse);
 
-let budgetSet;
-
-function addBudget (budget){
+function addBudget (budgets){
     ReactDOM.render(
-            <App budgets={budget} />,
+            <App budgets={budgets} error="false" />,
             document.getElementById('root'));
 }
 
+function failReport(){
+    console.log("fail being reported.");
+    ReactDOM.render(
+            <App error="true" />,
+            document.getElementById('root'));
+}
+
+// estou confuso com este trecho. Ele deveria passar pelo fail Report.
+// apesar de estar funcionando, não está do jeito que deveria ser.
 fetch(api_url)
         .then(response => {
             return response.json();

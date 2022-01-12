@@ -1,20 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import Filter from "./components/Filter";
 import Budget from "./components/Budget";
 
 
 function App(props) {
-  console.log(props.budgets);
-
-  console.log(props.budgets[2].customer)
 
   const budgetList = props.budgets?.map(budget => (
-          <Budget customer={budget.customer} seller={budget.seller}
-                  description={budget.description} value={budget.value} />
+          <Budget key={budget.id} customer={budget.customer}
+                  seller={budget.seller} description={budget.description}
+                  value={budget.value} />
           )
   );
-  // console.log(budgetList);
 
   return (
     <div className="App">
@@ -49,7 +45,7 @@ function App(props) {
         <div className="col-12">
           <p>
             Desenvolvido pela
-            <img src="./logo-cod.png" width="80" />
+            <img src="./logo-cod.png" width="80px" alt="Codifica" />
           </p>
         </div>
       </footer>
