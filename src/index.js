@@ -7,16 +7,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 let api_url = "https://my-json-server.typicode.com/codificar/oficina/proposals";
-let response = fetch(api_url);
-// console.log(response)
-// let budgetResponse = response.json();
-// console.log(budgetResponse);
 
-let budgetSet;
-
-function addBudget (budget){
+function addBudget (budgets){
     ReactDOM.render(
-            <App budgets={budget} />,
+            <App budgets={budgets} />,
+            document.getElementById('root'));
+}
+
+function failReport(){
+    ReactDOM.render(
+            <App  />,
             document.getElementById('root'));
 }
 
